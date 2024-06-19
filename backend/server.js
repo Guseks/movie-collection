@@ -4,7 +4,6 @@ import cors from 'cors';
 import router from "./src/routes.js"
 import dotenv from "dotenv"
 import { errorHandler } from './src/middleware/errorHandler.js'
-import { Movie } from './src/database/movieModel.js';
 
 dotenv.config();
 
@@ -17,31 +16,18 @@ app.use("/", router);
 
 app.use(errorHandler);
 
-
-//const hostname = '192.168.1.74';
 const PORT = process.env.PORT;
 
-/*
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
 
-*/
 
 async function connectToDatabase() {
-  //const dbPath = process.env.dbPath;
+  
   const dbURL = process.env.dbURL;
   
   
   try {
     await mongoose.connect(dbURL);
-    /*
-    const testMovie = new Movie ({
-      movieID: "1234",
-      title: "Test Movie"
-    });
-    testMovie.save();
-    */
+    
     console.log('Connected to MongoDB');
     
     
