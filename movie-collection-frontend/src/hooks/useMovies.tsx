@@ -33,19 +33,7 @@ const useMovies = ({ searchOptions, apiRoute }: useMoviesProps) => {
 
   const formattedParams = new URLSearchParams(queryParams).toString();
   useEffect(() => {
-    //const API_URL = `${BASE_API_URL}${apiRoute}?api_key=${API_KEY}`;
-    // with_genres=${genreID}&language=en-US&primary_release_date.gte=2011-01-01
-    // Genres: Romance = 10749
-
-    //console.log(API_URL);
     async function getMovies() {
-      /*
-      console.log(
-        `${BASE_API_URL}${apiRoute}?api_key=${API_KEY}&${formattedParams}&page=${parseInt(
-          searchOptions.page
-        )}`
-      );
-      */
       const response = await axios.get(
         `${BASE_API_URL}${apiRoute}?api_key=${API_KEY}&${formattedParams}&page=${parseInt(
           searchOptions.page
@@ -55,13 +43,6 @@ const useMovies = ({ searchOptions, apiRoute }: useMoviesProps) => {
     }
     getMovies();
   }, []);
-
-  /*
-  searchOptions.genreID,
-    searchOptions.releaseDate,
-    searchOptions.voteAverage,
-    searchOptions.page,
-    */
 
   return { movieList, setMovieList };
 };

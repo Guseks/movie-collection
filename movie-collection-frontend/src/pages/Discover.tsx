@@ -1,7 +1,6 @@
 import useGenres from "../hooks/useGenres";
 import { useEffect, useState } from "react";
 import axios from "axios";
-//import useMovies from "../hooks/useMovies";
 import MovieCard from "../components/MovieCard";
 
 import {
@@ -110,7 +109,7 @@ const Discover = () => {
   }
 
   const searchOptions = {
-    genreID: selectedOptions.genres, //35 10751 28 "10749", "18"
+    genreID: selectedOptions.genres,
     language: "en-US",
     releaseDate: `${selectedOptions.releaseYear}-01-01`,
     voteAverage: `${selectedOptions.rating}`,
@@ -144,14 +143,6 @@ const Discover = () => {
     }
     getMovies();
   }, [selectedOptions]);
-
-  /*
-  const { movieList }: { movieList: Movie[] } = useMovies({
-    searchOptions: searchOptions,
-    apiRoute: API_ROUTE,
-  });
-
-  */
 
   return (
     <Container className="flex bg-black px-5 py-5 rounded-md">

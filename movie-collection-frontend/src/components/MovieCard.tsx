@@ -125,6 +125,8 @@ const MovieCard = ({ movie, genres }: movieCardProps) => {
     }
   }
 
+  const releaseYear = movie.release_date.split("-")[0];
+
   return (
     <Card className="h-sm lg:h-lg w-96 lg:w-64 border-2 border-stone-950 shadow-md shadow-black relative rounded-sm pb-3 hover:shadow-sm hover:shadow-white hover:cursor-pointer">
       <img
@@ -148,8 +150,12 @@ const MovieCard = ({ movie, genres }: movieCardProps) => {
             ))}
           </div>
         </div>
+        <p className="text-base lg:text-xs font-semibold">
+          <span className="text-base lg:text-xs font-bold">Release Year: </span>
+          {releaseYear}
+        </p>
       </div>
-      <h4 className="font-bold text-2xl lg:text-base px-3 py-2">
+      <h4 className="font-bold text-2xl lg:text-base px-3 py-2 flex gap-x-5 items-center">
         {movie.title}
       </h4>
 

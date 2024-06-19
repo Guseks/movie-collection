@@ -20,10 +20,6 @@ interface Movie {
 }
 
 export const Home = () => {
-  // TODO: Make MovieCarousel a general carousel component. Move logic for what movies each carousel should display to this component.
-
-  //TODO: Add another movieCarousel component for displaying my list of favorite movies.
-
   const { genres } = useGenres();
 
   const searchOptions = {
@@ -36,6 +32,7 @@ export const Home = () => {
     page: "1",
   };
   const API_ROUTE = "/discover/movie";
+
   const { movieList }: { movieList: Movie[] } = useMovies({
     searchOptions: searchOptions,
     apiRoute: API_ROUTE,
