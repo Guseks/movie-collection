@@ -162,11 +162,11 @@ const Discover = () => {
         </div>
       </SideMenu>
       <MainContent>
-        <div className="relative h-28 p-2 px-4 flex max-[700px]:gap-4  gap-6 border-b-4 items-center max-[700px]:flex-col max-[700px]:h-44 min-[200px]:items-start">
-          <div className="flex gap-3 md:py-3 items-center text-lg font-bold">
+        <div className=" relative h-28 p-2 px-4 lg:py-4 flex max-[700px]:gap-4 gap-6 border-b-4 items-center max-[700px]:flex-col max-[700px]:h-44">
+          <div className="flex gap-3 max-[700px]:w-full items-center justify-between lg:justify-start text-lg font-bold">
             <h4 className="font-bold">Released after: </h4>
             <select
-              className=" bg-stone-950 rounded-sm px-2 py-4  lg:py-2 w-24"
+              className=" bg-stone-950 rounded-sm px-2 py-4  lg:py-2 w-28 lg:w-24"
               value={selectedOptions.releaseYear}
               onChange={(e) =>
                 handleReleaseYearChange(parseInt(e.target.value))
@@ -183,10 +183,10 @@ const Discover = () => {
               ))}
             </select>
           </div>
-          <div className="flex justify-center items-center gap-2 md:mt-3 text-lg font-bold">
+          <div className="flex items-center gap-2 text-lg font-bold justify-between lg:justify-start max-[700px]:w-full">
             <h4 className="font-bold">Rating above: </h4>
             <select
-              className="bg-stone-950 rounded-sm px-2  py-4 lg:py-2 w-32 lg:w-20"
+              className="bg-stone-950 rounded-sm px-2  py-4 lg:py-2 w-28 lg:w-20"
               defaultValue={selectedOptions.rating}
               onChange={(e) => handleRatingChange(parseInt(e.target.value))}
             >
@@ -201,7 +201,7 @@ const Discover = () => {
               ))}
             </select>
           </div>
-          <div className="flex gap-3 items-center lg:hidden md:py-3 text-lg font-bold">
+          <div className="flex gap-6 items-center justify-between lg:justify-start w-full lg:hidden text-lg font-bold">
             <h4>Genre: </h4>
             <select
               className="bg-stone-950 p-2 w-28 py-4"
@@ -219,7 +219,7 @@ const Discover = () => {
             </select>
           </div>
 
-          <div className="lg:absolute lg:right-10  h-12 flex justify-center items-center mt-1">
+          <div className="lg:absolute lg:right-10 flex  items-center max-[700px]:w-full">
             <div
               onClick={() => handlePrevPage()}
               className="h-full bg-stone-900 w-10 hover:border-2 cursor-pointer rounded-md  flex items-center justify-center p-6"
