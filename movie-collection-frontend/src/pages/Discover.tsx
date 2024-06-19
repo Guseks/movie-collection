@@ -137,14 +137,13 @@ const Discover = () => {
   useEffect(() => {
     async function getMovies() {
       const response = await axios.get(
-        `${BASE_API_URL}${API_ROUTE}?api_key=${API_KEY}&${formattedParams}&page=${parseInt(
-          searchOptions.page
-        )}`
+        `${BASE_API_URL}${API_ROUTE}?api_key=${API_KEY}&${formattedParams}&page=
+        ${parseInt(searchOptions.page)}`
       );
       setMovieList(response.data.results);
     }
     getMovies();
-  }, []);
+  }, [selectedOptions]);
 
   /*
   const { movieList }: { movieList: Movie[] } = useMovies({
