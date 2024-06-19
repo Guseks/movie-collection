@@ -163,7 +163,7 @@ const Discover = () => {
       </SideMenu>
       <MainContent>
         <div className="relative h-28 p-2 px-4 flex max-[700px]:gap-4  gap-6 border-b-4 items-center max-[700px]:flex-col max-[700px]:h-44 min-[200px]:items-start">
-          <div className="flex gap-3 md:py-3 items-center text-2xl font-bold">
+          <div className="flex gap-3 md:py-3 items-center text-lg font-bold">
             <h4 className="font-bold">Released after: </h4>
             <select
               className=" bg-stone-950 rounded-sm px-2 py-4  lg:py-2 w-24"
@@ -183,7 +183,7 @@ const Discover = () => {
               ))}
             </select>
           </div>
-          <div className="flex justify-center items-center gap-2 md:mt-3 text-2xl font-bold">
+          <div className="flex justify-center items-center gap-2 md:mt-3 text-lg font-bold">
             <h4 className="font-bold">Rating above: </h4>
             <select
               className="bg-stone-950 rounded-sm px-2  py-4 lg:py-2 w-32 lg:w-20"
@@ -226,7 +226,7 @@ const Discover = () => {
             >
               <button className="h-0 w-0 border-x-8 border-x-transparent border-b-8 border-b-white -rotate-90" />
             </div>
-            <div className="p-5 font-bold text-2xl lg:text-lg">
+            <div className="p-5 font-bold text-lg lg:text-lg">
               {" "}
               {selectedOptions.page}
             </div>

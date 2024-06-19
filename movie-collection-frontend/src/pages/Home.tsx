@@ -52,7 +52,7 @@ export const Home = () => {
         />
       </div>
       <div className="flex flex-col py-10 px-5 gap-7 m-6 mt-10 bg-black rounded-md lg:hidden">
-        <h4 className="font-bold  text-xl lg:text-4xl ml-12 ">
+        <h4 className="font-bold  text-xl lg:text-4xl lg:ml-12 ">
           Popular in Romance and Drama
         </h4>
         <div className="flex flex-wrap justify-center gap-3">
