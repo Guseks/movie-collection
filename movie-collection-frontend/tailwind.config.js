@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {},
     height: {
-      sm: "700px",
+      sm: "530px",
       lg: "475px"
     }
 

@@ -48,3 +48,5 @@ const useMovies = ({ searchOptions, apiRoute }: useMoviesProps) => {
 };
 
 export default useMovies;
+
+

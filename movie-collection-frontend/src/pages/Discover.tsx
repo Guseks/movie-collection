@@ -201,7 +201,7 @@ const Discover = () => {
               ))}
             </select>
           </div>
-          <div className="flex gap-3 items-center lg:hidden md:py-3 text-2xl font-bold">
+          <div className="flex gap-3 items-center lg:hidden md:py-3 text-lg font-bold">
             <h4>Genre: </h4>
             <select
               className="bg-stone-950 p-2 w-28 py-4"
@@ -219,7 +219,7 @@ const Discover = () => {
             </select>
           </div>
 
-          <div className="lg:absolute lg:right-10 max-[700px]:absolute max-[700px]:right-16 max-[700px]:top-8 h-12 flex justify-center items-center mt-1">
+          <div className="lg:absolute lg:right-10  h-12 flex justify-center items-center mt-1">
             <div
               onClick={() => handlePrevPage()}
               className="h-full bg-stone-900 w-10 hover:border-2 cursor-pointer rounded-md  flex items-center justify-center p-6"

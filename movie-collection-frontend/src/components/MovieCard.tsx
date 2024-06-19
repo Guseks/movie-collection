@@ -128,7 +128,7 @@ const MovieCard = ({ movie, genres }: movieCardProps) => {
   const releaseYear = movie.release_date.split("-")[0];
 
   return (
-    <Card className="h-sm lg:h-lg w-96 lg:w-64 border-2 border-stone-950 shadow-md shadow-black relative rounded-sm pb-3 hover:shadow-sm hover:shadow-white hover:cursor-pointer">
+    <Card className="h-sm lg:h-lg w-72 lg:w-64 border-2 border-stone-950 shadow-md shadow-black relative rounded-sm pb-3 hover:shadow-sm hover:shadow-white hover:cursor-pointer">
       <img
         className=""
         key={movie.id}
@@ -138,37 +138,37 @@ const MovieCard = ({ movie, genres }: movieCardProps) => {
         className="hidden group-hover:block p-3 absolute top-0 w-68 border-2 bg-black z-10  text-sm  font-semibold flex-col gap-4"
         ref={infoRef}
       >
-        <p className="border-b-2 text-2xl lg:text-lg">Description</p>
-        <p className=" text-lg lg:text-xs">{movie.overview}</p>
+        <p className="border-b-2 text-xl lg:text-lg">Description</p>
+        <p className=" text-sm lg:text-xs">{movie.overview}</p>
         <div className="flex gap-2 items-center">
-          <p className=" text-base lg:text-xs font-bold">Genres: </p>
+          <p className=" text-sm lg:text-xs font-bold">Genres: </p>
           <div className="flex flex-row gap-1 flex-wrap">
             {movieGenres.map((genre: string) => (
-              <p key={genre} className="text-base lg:text-xs">
+              <p key={genre} className="text-sm lg:text-xs">
                 {genre},
               </p>
             ))}
           </div>
         </div>
-        <p className="text-base lg:text-xs font-semibold">
-          <span className="text-base lg:text-xs font-bold">Release Year: </span>
+        <p className="text-sm lg:text-xs font-semibold">
+          <span className="text-sm lg:text-xs font-bold">Release Year: </span>
           {releaseYear}
         </p>
       </div>
-      <h4 className="font-bold text-2xl lg:text-base px-3 py-2 flex gap-x-5 items-center">
+      <h4 className="font-bold text-lg lg:text-base px-3 py-2 flex gap-x-5 items-center">
         {movie.title}
       </h4>
 
-      <div className="absolute flex gap-6 lg:gap-1 bottom-2 lg:right-2 right-5 ">
+      <div className="absolute flex gap-3 lg:gap-1 bottom-2 lg:right-2 right-5 ">
         <button
           onMouseEnter={() => showInfo()}
           onMouseLeave={() => hideInfo()}
-          className="lg:text-xs font-semibold left-2 bottom-2 py-2 px-4  lg:px-2 rounded-md hover:bg-stone-900 group text-xl"
+          className="lg:text-xs font-semibold left-2 bottom-2 py-2 px-4  lg:px-3 rounded-md hover:bg-stone-900 group text-sm"
         >
           More info
         </button>
         <AddButton
-          className="w-28 lg:w-16  lg:text-xs font-semibold right-2 py-2 lg:px-2 bottom-2 rounded-md hover:bg-stone-900 text-xl"
+          className="w-20 lg:w-16  text-sm lg:text-xs font-semibold right-2 py-2 lg:px-2 bottom-2 rounded-md hover:bg-stone-900 "
           onClick={() => handleMovieList(movie)}
           selected={isMovieInList}
         >
