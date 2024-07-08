@@ -2,7 +2,6 @@ import useGenres from "../hooks/useGenres";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MovieCard from "../components/MovieCard";
-import jwt from "jsonwebtoken";
 
 import {
   MainContent,
