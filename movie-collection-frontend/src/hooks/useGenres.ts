@@ -7,9 +7,14 @@ const useGenres = () => {
 
   useEffect(() => {
     async function getGenres() {
-      const response = await axios.get(
-        `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`
-      );
+      const options = {
+        method: "GET",
+        url: `https://api.themoviedb.org/3/genre/movie/list?`,
+        headers: {
+          Authorization: `Bearer ${API_KEY}`
+        },
+      }
+      const response = await axios.request(options);
       setGenres(response.data.genres);
     }
     getGenres();

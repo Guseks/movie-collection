@@ -2,6 +2,7 @@ import useGenres from "../hooks/useGenres";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MovieCard from "../components/MovieCard";
+import jwt from "jsonwebtoken";
 
 import {
   MainContent,
@@ -131,14 +132,22 @@ const Discover = () => {
   };
 
   const formattedParams = new URLSearchParams(queryParams).toString();
-  const API_ROUTE = "/discover/movie";
+  const API_ROUTE = "discover/movie";
 
   useEffect(() => {
     async function getMovies() {
-      const response = await axios.get(
-        `${BASE_API_URL}${API_ROUTE}?api_key=${API_KEY}&${formattedParams}&page=
-        ${parseInt(searchOptions.page)}`
-      );
+      const options = {
+        method: "GET",
+        url: `${BASE_API_URL}${API_ROUTE}?${formattedParams}&page=
+        ${parseInt(searchOptions.page)}`,
+        headers: {
+          accept: "application/json",
+          Authorization: `Bearer ${API_KEY}`,
+        },
+      };
+
+      const response = await axios.request(options);
+
       setMovieList(response.data.results);
     }
     getMovies();

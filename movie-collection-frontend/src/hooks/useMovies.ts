@@ -34,11 +34,16 @@ const useMovies = ({ searchOptions, apiRoute }: useMoviesProps) => {
   const formattedParams = new URLSearchParams(queryParams).toString();
   useEffect(() => {
     async function getMovies() {
-      const response = await axios.get(
-        `${BASE_API_URL}${apiRoute}?api_key=${API_KEY}&${formattedParams}&page=${parseInt(
+      const options = {
+        method: "GET",
+        url:  `${BASE_API_URL}${apiRoute}?${formattedParams}&page=${parseInt(
           searchOptions.page
-        )}`
-      );
+        )}`,
+        headers: {
+          Authorization: `Bearer ${API_KEY}`
+        },
+      }
+      const response = await axios.request(options);
       setMovieList(response.data.results);
     }
     getMovies();

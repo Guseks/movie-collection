@@ -39,7 +39,6 @@ export const MoviesProvider = ({ children }: MovieContextProps) => {
       const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
       try {
         const response = await axios.get<Movie[]>(`${BACKEND_URL}/movies`);
-        console.log("Fetched Movies: ", response.data);
         setMyMovies(response.data);
       } catch (error) {
         console.error("Error fetching movies", error);
