@@ -246,7 +246,7 @@ const Discover = () => {
             </div>
           </div>
         </div>
-        <div className="max-[700px]:flex max-[700px]:justify-center max-[700px]:flex-wrap  lg:grid md:flex md:flex-wrap lg:grid-cols-6  gap-5 lg:gap-3 py-5 lg:py-3 px-2">
+        <div className="max-[700px]:flex max-[700px]:justify-center max-[700px]:flex-wrap justify-center grid md:flex md:flex-wrap max-[2000px]:grid-cols-6 max-[1000px]:grid-cols-3   gap-5 lg:gap-3 py-5 lg:py-3 px-2">
           {movieList.map((movie) => (
             <MovieCard key={movie.id} movie={movie} genres={genres} />
           ))}

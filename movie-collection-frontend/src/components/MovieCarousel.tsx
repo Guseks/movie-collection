@@ -68,7 +68,7 @@ const MovieCarousel = ({ title, movieList }: movieCarouselProps) => {
   };
 
   return (
-    <Carousel className="grid grid-flow-row relative p-5 bg-black justify-center items-center rounded-md ">
+    <Carousel className="mx-6 grid grid-flow-row relative p-5 bg-black justify-center items-center rounded-md ">
       <h4 className="font-bold m-0 text-2xl">{title}</h4>
       <NewMoviesDisplay
         className="h-96 grid grid-flow-col gap-2 "
